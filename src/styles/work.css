@@ -1,0 +1,86 @@
+
+
+
+
+.workMainContainer {
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+    width: 17vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+    border: 1px solid rgb(0, 60, 255);   
+
+}
+
+
+.WorkHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+       
+}
+
+
+
+
+
+
+
+/* ================================== Education FORM =================================== */
+
+.workFormSectionWrapper.collapsed{
+    display: flex;
+    flex-direction: column;
+
+    height: 5vh;
+    width: 15vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+    border: 1px solid red;  
+}
+
+.workFormSectionWrapper.expanded{
+    display: flex;
+    flex-direction: column;
+
+    width: 15vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+    border: 1px solid red;  
+}
+
+.workFormHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+      
+}
+
+
+.workForm.collapsed{
+    display: none
+}
+
+
+.workAddBtnContainer.collapsed{
+    display: none
+}

@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mainWrapper{
+  display: flex;
+  gap: 20px;
+
+}
+
+.rightWrapper{
+  display: flex;
+  height: 300vh;
+  width: 300vw;
+
+  background-color: white;
+  border: 1px, solid red;
+}
