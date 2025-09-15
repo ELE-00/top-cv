@@ -1,40 +1,41 @@
 import { useState } from 'react'
 import '../styles/education.css'
 
-function EducationForm({education, onChange, onDelete}) {
-    const [isBtnExpanded, setIsBtnExpanded] = useState(true);
-    const [isFormExpanded, setIsFormExpanded] = useState(true);
+function EducationForm({education, onChange, onDelete, parentExpanded}) {
+    const [childExpanded, setChildExpanded] = useState(true);
+    const isVisible = parentExpanded && childExpanded;
 
     const toggleBtnExpand = () => {
-        setIsBtnExpanded(!isBtnExpanded);
-        setIsFormExpanded(!isFormExpanded);
+        setChildExpanded(prev => !prev);
     }
+    
 
   return (
     <>
       
-      <div className={`eduFormsectionWrapper ${isBtnExpanded ? 'expanded' : 'collapsed'}`}>
+      <div className={`eduFormsectionWrapper ${isVisible ? 'expanded' : 'collapsed'}`}>
 
-        <div class="eduHeaderContainer">
+        <div className="eduHeaderContainer">
           <h3>Add Education</h3>
           <button onClick={toggleBtnExpand}>
-            <img src="assets/down.png" alt="down.png" class="expandArrow"></img>
+            <img src="assets/down.png" alt="down.png" className="expandArrow"></img>
           </button>
         </div>
 
-        <form className={`eduForm ${isFormExpanded ? 'expanded' : 'collapsed'}`}>
+        <form className={`eduForm ${isVisible ? 'expanded' : 'collapsed'}`}>
             <label for="school">School Name:</label>
             <input type="text" id="school" placeholder="University of..." value={education.school} onChange={(e) => onChange(education.id, "school", e.target.value)}></input>
             
-            <label for="title">Title of Study:</label>
-            <input type="text" id="title" placeholder="Bachelor of Arts" value={education.title} onChange={(e) => onChange(education.id, "title", e.target.value)}></input>
+            <label for="degree">Title of Study:</label>
+            <input type="text" id="degree" placeholder="Bachelor of Arts" value={education.degree} onChange={(e) => onChange(education.id, "title", e.target.value)}></input>
 
             <label for="date">Date of Study:</label>
             <input type="text" id="date" placeholder="2019 - 2023" value={education.date} onChange={(e) => onChange(education.id, "date", e.target.value)}></input>
+            
         </form>
 
-        <div className={`eduAddBtnContainer ${isFormExpanded ? 'expanded' : 'collapsed'}`}>
-            <button class="AddButton" onClick={() => onDelete(education.id)}>Delete</button>
+        <div className={`eduAddBtnContainer ${isVisible ? 'expanded' : 'collapsed'}`}>
+            <button className="deleteBtn" onClick={() => onDelete(education.id)}>Delete</button>
         </div>
 
       </div>

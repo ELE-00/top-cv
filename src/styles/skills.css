@@ -1,0 +1,182 @@
+/* ================================== Certification  =================================== */
+.certMainContainer{
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+    width: 17vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+}
+
+
+.certAddButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+
+    height: 20px;
+    width: 80px;
+    background-color: rgb(222, 222, 222);
+    color: black;  
+
+}
+
+
+
+.certHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+       
+}
+
+
+.certFormsectionWrapper{
+    display: flex;
+    flex-direction: column;
+
+    width: 15vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+    border: 1px solid rgb(149, 149, 149);  
+}
+
+.certMainContainer.collapsed{
+    height: 2.5vh;
+}
+
+
+.certcomponentContainer.collapsed{
+    display: none
+}
+
+.certAddBtnContainer.collapsed{
+    display: none
+}
+
+/* ================================== Certification FORM =================================== */
+
+
+
+.certFormHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+      
+}
+
+.certForm.collapsed{
+    display: none
+}
+
+
+.certAddBtnContainer.collapsed{
+    display: none
+}
+
+
+/* ================================== Language  =================================== */
+
+.langMainContainer{
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+    width: 17vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+}
+
+
+.langAddButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+
+    height: 20px;
+    width: 80px;
+    background-color: rgb(222, 222, 222);
+    color: black;  
+
+}
+
+.langHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+       
+}
+
+
+
+
+.langFormsectionWrapper{
+    display: flex;
+    flex-direction: column;
+
+    width: 15vw;
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+
+    border: 1px solid rgb(149, 149, 149); 
+
+}
+
+.langMainContainer.collapsed{
+    height: 2.5vh;
+}
+
+/* ================================== Language FORM =================================== */
+
+.langFormHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+      
+}
+
+.langForm.collapsed{
+    display: none
+}
+
+.langcomponentContainer.collapsed{
+    display: none
+}
+
+
+.langAddBtnContainer.collapsed{
+    display: none
+}
+
+

@@ -7,10 +7,14 @@ import '../styles/work.css'
 function Work({work, setWork}) {
 
   const [nextWorkId, setNextWorkId] = useState(1);
+  const [isExpanded, setIsExpanded] = useState(true);
 
+  const toggleExpand = () => {
+      setIsExpanded(prev => !prev);
+  }
 
   function handleAddWork(){
-    const newForm = {id: nextWorkId, company: "", title: "", description: "", fromDate: "", untilDate: ""}
+    const newForm = {id: nextWorkId, company: "", position: "", description: "", fromDate: "", untilDate: "", location: ""}
     setWork([...work, newForm])
     setNextWorkId(nextWorkId + 1)
   };
@@ -38,28 +42,29 @@ function Work({work, setWork}) {
   return (
     <>
     
-    <div className="workMainContainer">
+   <div className={`workMainContainer ${isExpanded ? 'expanded' : 'collapsed'}`}>
 
       <div className="workFormHeaderContainer">
           <h3>Work Experience</h3>
-          <button>
-              <img src="assets/down.png" alt="down.png" className="expandArrow"></img>
+          <button onClick={toggleExpand}>
+            <img src="assets/down.png" alt="down.png" className="expandArrow"></img>
           </button>
       </div>
 
 
-      <div className="componentContainer">
+      <div className={`workcomponentContainer ${isExpanded ? 'expanded' : 'collapsed'}`}>
         {work.map((item) => (
           <WorkForm 
             key = {item.id}
             work = {item}
             onChange = {handleChangeWork}
             onDelete = {handleDeleteWork}
+            parentExpanded={isExpanded}
           />
         ))}
       </div>
 
-      <div className="buttonContainer">
+      <div className={`workAddBtnContainer ${isExpanded ? 'expanded' : 'collapsed'}`}>
         <button className="AddButton" onClick={handleAddWork}>+</button>
       </div>
     </div>

@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .mainWrapper{
@@ -11,11 +10,99 @@
 
 }
 
-.rightWrapper{
+.DisplayWrapper{
   display: flex;
-  height: 300vh;
+  flex-direction: column;
+  height: 140vh;
   width: 300vw;
 
+  overflow: hidden;
+
+  padding: 60px;
   background-color: white;
-  border: 1px, solid red;
+
+}
+
+.nameContainer{
+  display: block;
+  text-align: left;
+
+
+}
+
+.profileContainer{
+  display: flex;
+  gap: 10px;
+  /* border: 1px, solid red; */
+}
+
+
+.SummaryContainer{
+  display: block;
+  text-align: left;
+
+}
+
+.seperator{
+  border: 1px, solid black;
+  margin-bottom: 10px;
+}
+
+
+.companyDateContainer{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+
+
+}
+
+.dateContainer{
+  display: flex;
+  gap: 5px;
+  
+}
+
+.positionLocationContainer{
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+
+}
+
+.descriptionContainer{
+  display: flex;
+  
+}
+
+.schoolDegreeSection{
+  display: flex;
+  gap: 5px;
+  
+}
+
+.eduContentContainer{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.eduDateContainer{
+  display: flex;
+  font-weight: bold;
+
+}
+
+
+
+.certContainer{
+  display: flex;
+  gap: 5px;
+  
+}
+
+.languageContainer{
+  display: flex;
+  gap: 5px;
+  
 }

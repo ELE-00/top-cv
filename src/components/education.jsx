@@ -5,8 +5,12 @@ import '../styles/education.css'
 function Education({education, setEducation}) {
 
   // const [education, setEducation] = useState([]);
-  const [nextId, setNextId] = useState(1);
+  const [nextId, setNextId] = useState(1);  
+  const [isExpanded, setIsExpanded] = useState(true);
 
+  const toggleExpand = () => {
+      setIsExpanded(prev => !prev);
+  }
 
   
    function handleChange(id, field, value) {
@@ -23,7 +27,7 @@ function Education({education, setEducation}) {
   };
 
   function addEducationForm() {
-    const newForm = { id: nextId, school: "", title: "", date: "" }
+    const newForm = { id: nextId, school: "", degree: "", date: "" }
     setEducation([...education, newForm])
     setNextId(nextId + 1);
     
@@ -36,16 +40,16 @@ function Education({education, setEducation}) {
 
   return (
     <>
-      <div className="mainContainer">
+      <div className={`eduMainContainer ${isExpanded ? 'expanded' : 'collapsed'}`}>
 
         <div className="eduHeaderContainer"> 
           <h3>Add Education</h3>
-          <button>
+          <button onClick={toggleExpand}>
             <img src="assets/down.png" alt="down.png" className="expandArrow"></img>
           </button>
         </div>
 
-        <div className="componentContainer">
+        <div className={`educomponentContainer ${isExpanded ? 'expanded' : 'collapsed'}`}>
           
           {education.map((item) => (
             <EducationForm 
@@ -53,13 +57,14 @@ function Education({education, setEducation}) {
               education={item} 
               onChange={handleChange}
               onDelete={handleDelete}
+              parentExpanded={isExpanded}
             />
            
           ))}
 
         </div>
 
-        <div className="buttonContainer">
+        <div className={`eduAddBtnContainer ${isExpanded ? 'expanded' : 'collapsed'}`}>
             <button className="AddButton" onClick={addEducationForm}>+</button>
         </div>
 
