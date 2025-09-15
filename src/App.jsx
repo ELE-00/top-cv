@@ -5,29 +5,22 @@ import Education from './components/education.jsx'
 import Work from './components/work.jsx'
 import Certifications from './components/certifications.jsx'
 import Languages from './components/languages.jsx'
-import defaultData from './components/defaultData.jsx'
 
 function App() {
   
-  // const [basicInfo, setBasicInfo] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   github: "",
-  //   linkedin: "",
-  //   summary: ""
-  // });
+  const [basicInfo, setBasicInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    github: "",
+    linkedin: "",
+    summary: ""
+  });
 
-  // const [education, setEducation] = useState([]);
-  // const [work, setWork] = useState([]);
-
-  const [basicInfo, setBasicInfo] = useState(defaultData.basicInfo);
-  const [work, setWork] = useState(defaultData.work);
-  const [certifications, setCertifications] = useState(defaultData.certifications);
-  const [languages, setLanguages] = useState(defaultData.languages);
-  const [education, setEducation] = useState(defaultData.education);
-
-
+  const [education, setEducation] = useState([]);
+  const [work, setWork] = useState([]);
+  const [certifications, setCertifications] = useState([]);
+  const [languages, setLanguages] = useState([]);
 
 
   const BIhandleChange = (e) => {
